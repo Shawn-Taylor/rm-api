@@ -1,0 +1,35 @@
+swagger: "2.0"
+info:
+  description: RegisterMe swagger
+  version: "1.0.0"
+  title: RegisterMe 
+consumes:
+  - "application/json"
+produces:
+  - "application/json"
+
+basePath: "/api"
+
+# Paths supported by the server application
+paths:
+  /event:
+    get:
+      operationId: "event.read"
+      tags:
+        - "Event"
+      summary: "The event data structure supported by the server application"
+      description: "Read the list of events"
+      responses:
+        200:
+          description: "Successful read event list operation"
+          schema:
+            type: "array"
+            items:
+              properties:
+                name:
+                  type: "string"
+                start_date:
+                  type: "date"
+                end_date:
+                  type: "date"
+                
